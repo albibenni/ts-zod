@@ -3,6 +3,8 @@ import { z } from "zod";
 //       ^ 🕵️‍♂️
 
 export const toString = (num: unknown) => {
+  const param = z.number();
+  param.parse(num);
   return String(num);
 };
 
